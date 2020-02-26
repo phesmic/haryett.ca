@@ -32,6 +32,8 @@
             src="/haryett.ca/images/haryett_logo_navbar.png"
             height="50"
             width="auto"
+            title="Haryett and company logo"
+            alt="Harryet and company logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -76,7 +78,11 @@
                 >Areas Of Practice</a
               >
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="/haryett.ca/areas_of_practice/overview.html">Overview</a>
+                <a
+                  class="dropdown-item"
+                  href="/haryett.ca/areas_of_practice/overview.html"
+                  >Overview</a
+                >
                 <a
                   class="dropdown-item"
                   href="/haryett.ca/areas_of_practice/impaired_driving.html"
@@ -128,19 +134,21 @@
     </nav>
     <!--Above the fold-->
     <!-- Full Page Image Header with Vertically Centered Content -->
-    <header class="mastheadLanding">
+    <header class="masthead">
       <div class="container h-100">
         <div class="row h-75 align-items-center">
           <div class="col-12 text-center">
-            <h1 class="font-weight-light title">
+            <h1 class="title">
               Haryett &amp; Company
             </h1>
-            <h2 class="font-weight-light">Criminal Defense Lawyers</h2>
+            <h2 class="font-weight-light">
+              <strong>Criminal Defense Lawyers</strong>
+            </h2>
 
             <button
-              onclick="window.location.href = '/haryett.ca/our_philosophy/our_philosophy.html'"
+              onclick="window.location.href = '/haryett.ca/contact/contact.html'"
               type="button"
-              class="btn btn-secondary btn-lg buttonspacing"
+              class="btn btn-secondary btn-md buttonspacing"
             >
               Find out how our team can work for you
             </button>
@@ -152,10 +160,10 @@
     <!-- Page Content -->
     <section class="py-5">
       <div class="container">
-        <h3 class="accent font-weight-light">
+        <h3 class="accent mildpadrl">
           Let our team's experience work for you.
         </h3>
-        <p class="light">
+        <p class="light medpadrl">
           With over 20 years serving Alberta, our firm has the knowledge and
           expereience to help you protect your rights. Af chicharrones edison
           bulb gochujang pinterest kinfolk tilde viral kitsch cray. Cronut lyft
@@ -168,11 +176,10 @@
           whatever man braid. Banjo forage tacos distillery, blog cliche VHS
           butcher green juice synth whatever.
         </p>
-
-        <h3 class="accent font-weight-light">
+        <h3 class="accent mildpadrl">
           Our team is discrete and professional.
         </h3>
-        <p class="light">
+        <p class="light medpadrl">
           We know that even with an aquital, having a trial in the media can
           have a long lasting impact in your life. We believe in working hard to
           avoid publicity to protect your name. edison bulb gochujang pinterest
@@ -187,8 +194,8 @@
           juice synth whatever.
         </p>
 
-        <h3 class="accent font-weight-light">Get the right information.</h3>
-        <p class="light">
+        <h3 class="accent mildpadrl">Get the right information.</h3>
+        <p class="light medpadrl">
           With over 20 years serving Alberta, our firm has the knowledge and
           expereience to help you protect your rights. Af chicharrones edison
           bulb gochujang pinterest kinfolk tilde viral kitsch cray. Cronut lyft
@@ -204,51 +211,127 @@
       </div>
     </section>
 
-    <!-- Container (Contact Section) -->
-    <section class="py-5">
-      <div id="contact" class="container-fluid bg-grey">
-        <h2 class="text-center accent">CONTACT</h2>
-        <div class="row">
-          <div class="col-sm-8 slideanim">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <input
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  type="text"
-                  required
-                />
+    <!--New contact form-->
+
+    <div class="container">
+      <h1 class="accent text-center">Contact form</h1>
+      <div class="row">
+        <div class="col-xl-8">
+          <form
+            id="contact-form"
+            method="post"
+            action="contact.php"
+            role="form"
+          >
+            <div class="messages"></div>
+
+            <div class="controls">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input
+                      id="form_name"
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Please enter your firstname *"
+                      required="required"
+                      data-error="Firstname is required."
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input
+                      id="form_lastname"
+                      type="text"
+                      name="surname"
+                      class="form-control"
+                      placeholder="Please enter your lastname *"
+                      required="required"
+                      data-error="Lastname is required."
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-6 form-group">
-                <input
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  type="email"
-                  required
-                />
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input
+                      id="form_email"
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Please enter your email *"
+                      required="required"
+                      data-error="Valid email is required."
+                    />
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select
+                      id="form_need"
+                      name="need"
+                      class="form-control"
+                      required="required"
+                      data-error="Please specify your need."
+                    >
+                      <option value=""></option>
+                      <option value="Request quotation"
+                        >Consultation about a new case</option
+                      >
+                      <option value="Request order status"
+                        >Follow up on existing case</option
+                      >
+                      <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea
+                      id="form_message"
+                      name="message"
+                      class="form-control"
+                      placeholder="Message for me *"
+                      rows="4"
+                      required="required"
+                      data-error="Please, leave us a message."
+                    ></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input
+                    type="submit"
+                    class="btn btn-secondary btn-send"
+                    value="Send message"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="text-muted">
+                    <strong>*</strong> These fields are required
+                  </p>
+                </div>
               </div>
             </div>
-            <textarea
-              class="form-control"
-              id="comments"
-              name="comments"
-              placeholder="Comment"
-              rows="5"
-            ></textarea
-            ><br />
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button class="btn btn-secondary" type="submit">
-                  Send
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 mildmarginb">
+          </form>
+        </div>
+        <div class="col-xl-4">
             <h4>Our Office is at&colon;</h4>
             <p>
               100 9924 106 St NW
@@ -258,36 +341,62 @@
               T5K 1C4
             </p>
             <p>
-              <a href="tel:+17802465317"
+              <a href="tel:+17802465317" class="sitecolour"
                 ><span class="fas fa-phone"></span> Office: 1-780-426-5317</a
               >
             </p>
             <p>
-              <a href="tel:+17809402808"
+              <a href="tel:+17809402808" class="sitecolour"
                 ><span class="fas fa-phone"></span> Bail and Emergency:
                 1-780-940-2808</a
               >
             </p>
             <p>
-              <a href="mailto:reception@haryett.ca"
+              <a href="mailto:reception@haryett.ca" class="sitecolour"
                 ><span class="fas fa-envelope"></span> reception@haryett.ca</a
               >
             </p>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+
+    <footer class="container-fluid footerbackground">
+      <section class="py-5">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="footfont text-center">
+              <a href="#" class="accent">home</a> &#124;
+              <a href="*" class="accent">privacy policy</a> &#124;
+              <a href="*" class="accent">terms of use</a>
+            </p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <a class="btn btn-secondary btn-lg" href="tel:+17804265317"
-            >Call now &colon; 780&hyphen;426&hyphen;5317</a
-          >
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="footfont text-center">
+              &copy; Haryett &amp; Company 2020
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <!--footer-->
-    <footer class="container-fluid text-center">
-      <p>&copy; Haryett &amp; Company 2020</p>
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="footfont text-center">
+              Contact form
+                    template by
+                    <a
+                      href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form"
+                      target="_blank"
+                      class="sitecolour"
+                      >Bootstrapious</a
+                    >
+            </p>
+          </div>
+        </div>
+      </section>
     </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -303,5 +412,11 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"
+      integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="contact.js"></script>
   </body>
 </html>
