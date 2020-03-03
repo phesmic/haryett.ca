@@ -1,7 +1,7 @@
 .mastheadLanding {
     height: 100vh;
     min-height: 500px;
-    background-image: url(../images/Haryett_homepage_final.png);
+    background-image: url(../images/Haryett_homepage_resize.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,14 @@
 .masthead {
   height: 100vh;
   min-height: 500px;
-  background-image: url(../images/Haryett_homepage_final.png);
+  background-image: url(../images/Haryett_homepage_full.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mastheadnoimage{
+  height: 100vh;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,4 +119,8 @@ p {
 }
 .sitecolour{
   color: rgba(252, 176, 66, .95);
+}
+.blogborder{
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
 }
